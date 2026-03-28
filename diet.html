@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet - Healthy Teen Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4" style="display: none; width: 50px; height: 50px;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<li class="nav-item">
+    <a class="nav-link" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
+</li>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-leaf me-2"></i>Thriving Teen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle active" href="#" id="plannerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Planner
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="plannerDropdown">
+        <li><a class="dropdown-item" href="planner.html">Weekly Schedule</a></li>
+        <li><a class="dropdown-item" href="planner2.html">Daily Checklist</a></li>
+        <li><a class="dropdown-item active" href="goals.html">Goal Tracker</a></li>
+        <li><a class="dropdown-item" href="streak.html">Streak Calendar</a></li>
+    </ul>
+</li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4"><i class="fas fa-apple-alt me-2" style="color: #667eea;"></i>Healthy Eating for Teens</h1>
+        <p class="lead text-center mb-5">Eat balanced, stay hydrated, and enjoy food that fuels both body and mind.</p>
+
+        <!-- Sample Meal Plan Table -->
+        <h3 class="mb-3">🍽️ Sample Weekly Meal Plan (Mon-Fri)</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Breakfast</th>
+                        <th>Lunch</th>
+                        <th>Snack</th>
+                        <th>Dinner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mon</td><td>Oatmeal with berries</td><td>Grilled chicken wrap</td><td>Greek yogurt</td><td>Salmon & quinoa</td></tr>
+                    <tr><td>Tue</td><td>Scrambled eggs & toast</td><td>Turkey & avocado sandwich</td><td>Apple slices</td><td>Stir-fry tofu & veggies</td></tr>
+                    <tr><td>Wed</td><td>Smoothie bowl</td><td>Quinoa salad</td><td>Handful of nuts</td><td>Whole-grain pasta</td></tr>
+                    <tr><td>Thu</td><td>Pancakes with fruit</td><td>Hummus & veggie wrap</td><td>Rice cakes</td><td>Baked chicken & sweet potato</td></tr>
+                    <tr><td>Fri</td><td>Yogurt parfait</td><td>Leftover pasta</td><td>Banana</td><td>Homemade pizza</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Healthy Snack Ideas Cards -->
+        <h3 class="mt-5 mb-3">🍎 Healthy Snack Ideas</h3>
+        <div class="row g-4">
+            <div class="col-md-3"><div class="card p-3 text-center"><i class="fas fa-carrot fa-2x mb-2"></i>Veggies & hummus</div></div>
+            <div class="col-md-3"><div class="card p-3 text-center"><i class="fas fa-apple-alt fa-2x mb-2"></i>Apple with peanut butter</div></div>
+            <div class="col-md-3"><div class="card p-3 text-center"><i class="fas fa-egg fa-2x mb-2"></i>Boiled eggs</div></div>
+            <div class="col-md-3"><div class="card p-3 text-center"><i class="fas fa-seedling fa-2x mb-2"></i>Trail mix</div></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Thriving Teen. Empowering teens to live healthy.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('logoutBtn')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        sessionStorage.clear(); // or sessionStorage.removeItem('loggedIn')
+        window.location.href = 'login.html';
+    });
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 300) btn.style.display = 'block';
+    else btn.style.display = 'none';
+});
+document.getElementById('backToTop')?.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

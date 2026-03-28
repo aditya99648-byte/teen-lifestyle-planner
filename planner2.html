@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Checklist - Healthy Teen Planner</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .day-card {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+        .day-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        .task-check:checked + label {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4" style="display: none; width: 50px; height: 50px;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<li class="nav-item">
+    <a class="nav-link" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
+</li>
+
+    <!-- Navbar with dropdown for Planner -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-leaf me-2"></i>Thriving Teen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="diet.html">Diet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="study.html">Study</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exercise.html">Exercise</a></li>
+                   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle active" href="#" id="plannerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Planner
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="plannerDropdown">
+        <li><a class="dropdown-item" href="planner.html">Weekly Schedule</a></li>
+        <li><a class="dropdown-item" href="planner2.html">Daily Checklist</a></li>
+        <li><a class="dropdown-item active" href="goals.html">Goal Tracker</a></li>
+        <li><a class="dropdown-item" href="streak.html">Streak Calendar</a></li>
+    </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4"><i class="fas fa-check-circle me-2" style="color: #667eea;"></i>Daily Healthy Checklist</h1>
+        <p class="lead text-center mb-5">Check off tasks each day to build consistent habits. Reset weekly or whenever you need a fresh start.</p>
+
+        <!-- Cards for each day -->
+        <div class="row g-4">
+            <!-- Day cards: Monday to Sunday -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Monday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="mon1">
+                        <label class="form-check-label" for="mon1">✅ 30 min exercise</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="mon2">
+                        <label class="form-check-label" for="mon2">🥗 Eat veggies at lunch</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="mon3">
+                        <label class="form-check-label" for="mon3">📚 Study 2 hours</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="mon4">
+                        <label class="form-check-label" for="mon4">💧 Drink 8 glasses water</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="mon5">
+                        <label class="form-check-label" for="mon5">😴 Sleep by 10:30 PM</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Tuesday -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Tuesday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="tue1">
+                        <label class="form-check-label" for="tue1">🏃 20 min cardio</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="tue2">
+                        <label class="form-check-label" for="tue2">🍎 Eat fruit</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="tue3">
+                        <label class="form-check-label" for="tue3">📖 Review notes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="tue4">
+                        <label class="form-check-label" for="tue4">💧 Water goal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="tue5">
+                        <label class="form-check-label" for="tue5">🧘 Stretch 10 min</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Wednesday -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Wednesday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="wed1">
+                        <label class="form-check-label" for="wed1">🏋️ Strength workout</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="wed2">
+                        <label class="form-check-label" for="wed2">🥗 Salad for lunch</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="wed3">
+                        <label class="form-check-label" for="wed3">📝 Homework done</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="wed4">
+                        <label class="form-check-label" for="wed4">💧 8 glasses water</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="wed5">
+                        <label class="form-check-label" for="wed5">😴 Sleep by 10:30</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Thursday -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Thursday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="thu1">
+                        <label class="form-check-label" for="thu1">🚴 Bike / swim</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="thu2">
+                        <label class="form-check-label" for="thu2">🥜 Healthy snack</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="thu3">
+                        <label class="form-check-label" for="thu3">📚 Study group</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="thu4">
+                        <label class="form-check-label" for="thu4">💧 Water goal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="thu5">
+                        <label class="form-check-label" for="thu5">📵 Screen off 1h before bed</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Friday -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Friday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="fri1">
+                        <label class="form-check-label" for="fri1">🧘 Yoga / stretch</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="fri2">
+                        <label class="form-check-label" for="fri2">🥗 Eat greens</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="fri3">
+                        <label class="form-check-label" for="fri3">📖 Finish weekly review</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="fri4">
+                        <label class="form-check-label" for="fri4">💧 Water goal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="fri5">
+                        <label class="form-check-label" for="fri5">🎉 Reward yourself</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Weekend combined? Or separate cards for Sat/Sun -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Saturday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sat1">
+                        <label class="form-check-label" for="sat1">🏃 Outdoor activity</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sat2">
+                        <label class="form-check-label" for="sat2">🍳 Cook a healthy meal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sat3">
+                        <label class="form-check-label" for="sat3">📚 Study 1 hour</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sat4">
+                        <label class="form-check-label" for="sat4">💧 Water goal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sat5">
+                        <label class="form-check-label" for="sat5">😴 Sleep by 11 PM</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card day-card p-3">
+                    <h5 class="card-title"><i class="fas fa-sun me-2"></i>Sunday</h5>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sun1">
+                        <label class="form-check-label" for="sun1">🧘 Rest & stretch</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sun2">
+                        <label class="form-check-label" for="sun2">🥗 Meal prep</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sun3">
+                        <label class="form-check-label" for="sun3">📅 Plan next week</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sun4">
+                        <label class="form-check-label" for="sun4">💧 Water goal</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input task-check" type="checkbox" id="sun5">
+                        <label class="form-check-label" for="sun5">📵 Relax without screens</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="text-center mt-5">
+            <button class="btn btn-secondary" onclick="resetChecklists()"><i class="fas fa-undo me-2"></i>Reset All Checklists</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Thriving Teen. Empowering teens to live healthy.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS for reset -->
+    <script>
+        function resetChecklists() {
+            document.querySelectorAll('.task-check').forEach(cb => cb.checked = false);
+        }
+    </script>
+    
+<script>
+    document.getElementById('logoutBtn')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        sessionStorage.clear(); // or sessionStorage.removeItem('loggedIn')
+        window.location.href = 'login.html';
+    });
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 300) btn.style.display = 'block';
+    else btn.style.display = 'none';
+});
+document.getElementById('backToTop')?.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>

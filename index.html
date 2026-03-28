@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Teen Planner | Home</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<li class="nav-item">
+    <a class="nav-link" href="#" id="logoutBtn"><i class="fas fa-sign-out-alt me-1"></i>Logout</a>
+</li>
+
+    <button id="backToTop" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4" style="display: none; width: 50px; height: 50px;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-leaf me-2"></i>Thriving Teen</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="plannerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Planner
+    </a>
+  
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="plannerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Planner
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="plannerDropdown">
+        <li><a class="dropdown-item" href="planner.html">Weekly Schedule</a></li>
+        <li><a class="dropdown-item" href="planner2.html">Daily Checklist</a></li>
+        <li><a class="dropdown-item" href="goals.html">Goal Tracker</a></li>
+        <li><a class="dropdown-item" href="streak.html">Streak Calendar</a></li>
+    </ul>
+</li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Your Healthy Lifestyle Planner</h1>
+            <p class="lead">Designed for teenagers to balance diet, study, and exercise — because thriving is a habit.</p>
+            <a href="planner.html" class="btn btn-light btn-lg mt-3">Start Planning <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-apple-alt fa-3x mb-3" style="color: #667eea;"></i>
+                        <h5 class="card-title">Healthy Diet</h5>
+                        <p class="card-text">Fuel your body with nutritious meals and smart snacking tips tailored for teens.</p>
+                        <a href="diet.html" class="btn btn-primary">Explore Diet</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-book-open fa-3x mb-3" style="color: #667eea;"></i>
+                        <h5 class="card-title">Smart Study</h5>
+                        <p class="card-text">Learn effective techniques and schedules to boost focus and academic success.</p>
+                        <a href="study.html" class="btn btn-primary">Explore Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-dumbbell fa-3x mb-3" style="color: #667eea;"></i>
+                        <h5 class="card-title">Fun Exercise</h5>
+                        <p class="card-text">Stay active with workouts that are enjoyable and easy to fit into your routine.</p>
+                        <a href="exercise.html" class="btn btn-primary">Explore Exercise</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 Thriving Teen. Empowering teens to live healthy.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('logoutBtn')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        sessionStorage.clear(); // or sessionStorage.removeItem('loggedIn')
+        window.location.href = 'login.html';
+    });
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+    const btn = document.getElementById('backToTop');
+    if (window.scrollY > 300) btn.style.display = 'block';
+    else btn.style.display = 'none';
+});
+document.getElementById('backToTop')?.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
