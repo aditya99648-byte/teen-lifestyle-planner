@@ -11,13 +11,7 @@ A front-end web application designed to help teenagers manage their study time, 
 ## 🛠️ Tech Stack
 - HTML
 - CSS
-- JavaScript
-
-## 📌 Live Demo
-(Add your live link here later)
-
-## 📷 Screenshots
-(Add images here)
+- Javascript 
 
 ## 💡 Purpose
 To promote productivity and a healthy lifestyle among students.
